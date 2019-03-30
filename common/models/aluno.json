@@ -1,0 +1,53 @@
+{
+  "name": "aluno",
+  "plural": "alunos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idAluno": {
+      "type": "number",
+      "required": true
+    },
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "cpf": {
+      "type": "string",
+      "required": true
+    },
+    "dataNasc": {
+      "type": "date",
+      "required": true
+    },
+    "endereco": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    },
+    "municipio": {
+      "type": "string",
+      "required": true
+    },
+    "telefone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "matriculas": {
+      "type": "hasMany",
+      "model": "matricula",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

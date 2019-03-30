@@ -1,0 +1,38 @@
+{
+  "name": "avaliacao",
+  "plural": "avaliacoes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codAvaliacao": {
+      "type": "string",
+      "required": true
+    },
+    "nomeAvaliacao": {
+      "type": "string",
+      "required": true
+    },
+    "dataAvaliacao": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "curso": {
+      "type": "belongsTo",
+      "model": "curso",
+      "foreignKey": ""
+    },
+    "nota": {
+      "type": "hasOne",
+      "model": "nota",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,38 @@
+{
+  "name": "curso",
+  "plural": "cursos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codCurso": {
+      "type": "string",
+      "required": true
+    },
+    "nomeCurso": {
+      "type": "string",
+      "required": true
+    },
+    "anoSemestre": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "matricula": {
+      "type": "belongsTo",
+      "model": "matricula",
+      "foreignKey": ""
+    },
+    "avaliacoes": {
+      "type": "hasMany",
+      "model": "avaliacao",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

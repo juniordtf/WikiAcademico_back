@@ -1,0 +1,34 @@
+{
+  "name": "matricula",
+  "plural": "matriculas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "codMatricula": {
+      "type": "string",
+      "required": true
+    },
+    "dataMatricula": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "aluno": {
+      "type": "belongsTo",
+      "model": "aluno",
+      "foreignKey": ""
+    },
+    "cursos": {
+      "type": "hasOne",
+      "model": "curso",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

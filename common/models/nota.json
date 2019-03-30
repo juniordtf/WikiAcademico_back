@@ -1,0 +1,29 @@
+{
+  "name": "nota",
+  "plural": "notas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idNota": {
+      "type": "number",
+      "required": true
+    },
+    "nota": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "avaliacao": {
+      "type": "belongsTo",
+      "model": "avaliacao",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
